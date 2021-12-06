@@ -14,7 +14,7 @@ void main(){
         printf("\nenter the elements into the array:");
         for(i=0;i<r;i++){
             for(j=0;j<c;j++){
-                scanf("%d",&a[i][j]);
+                scanf("%d",&a[i][j]);                                           // Inputing martix
             }
         }
         printf("\n\n\n ~~~~~~~~~~~~~~~~~~~~~~   Output.........\n\n");
@@ -27,7 +27,7 @@ void main(){
         } 
         for(i=0;i<r;i++){
             for(j=0;j<c;j++){
-                if(a[i][j]!=0){
+                if(a[i][j]!=0){                                                 //  creating sparse matrix
                     b[k][0]=i;
                     b[k][1]=j;
                     b[k][2]=a[i][j];
@@ -51,7 +51,7 @@ void main(){
         w=b[0][2];
         for(i=0;i<b[0][1];i++){
             for(j=1;j<=w;j++){
-                if(b[j][1]==i){
+                if(b[j][1]==i){                                                 // Sparse to transpose
                     c1[z][0]=b[j][1];
                     c1[z][1]=b[j][0];
                     c1[z][2]=b[j][2];
@@ -75,7 +75,7 @@ void main(){
         m=c1[0][0];
         n=c1[0][1];
         for(i=1;i<k;i++){
-            l=c1[i][0];
+            l=c1[i][0];                                                     // transpose to matrix
             s=c1[i][1];
             v[l][s]=c1[i][2];    
         }
