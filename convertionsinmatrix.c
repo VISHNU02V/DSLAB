@@ -66,31 +66,6 @@ void main(){
             }
             printf("\n");
         }
-        printf("\nTHE TRANSPOSE OF MATRIX\n");
-        for(i=0;i<m;i++){
-            for(j=0;j<n;j++){
-                v[i][j]=0;
-            }
-        }
-        m=c1[0][0];
-        n=c1[0][1];
-        for(i=1;i<k;i++){
-            l=c1[i][0];                                                     // transpose to matrix
-            s=c1[i][1];
-            v[l][s]=c1[i][2];    
-        }
-        for(i=0;i<m;i++){
-            for(j=0;j<n;j++){
-                if(v[i][j]!=0){
-                    printf("  %d",v[i][j]);
-                }
-                else{
-                    v[i][j]=0;
-                    printf("  %d",v[i][j]);
-                }
-            }
-            printf("\n");
-        }
         printf("\ndo you want to continue::");
         scanf("%s",&ch);
     }while(ch=='y');
