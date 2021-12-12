@@ -1,0 +1,72 @@
+// Program to convert a matrix to sparse then to transpose of spare
+
+#include <stdio.h>
+
+void main(){
+    char ch='y';
+    do{
+        int r,c,i,j,a[50][50],b[50][50],k=1,c1[50][50],v[50][50],m,n,l,s,w,z=1;
+        printf("\n");
+        printf("\n######## TO CONVERT A MATRIX TO SPARSE THEN TO TRANSPOSE OF SPARES ########\n");
+        printf("\n\n\n~~~~~~~~~~~~~~~~~~~~~~~   inputing...........\n\n");
+        printf("enter the rows and columns of matrixs::_,_::");
+        scanf("%d,%d",&r,&c);
+        printf("\nenter the elements into the array:");
+        for(i=0;i<r;i++){
+            for(j=0;j<c;j++){
+                scanf("%d",&a[i][j]);                                           // Inputing martix
+            }
+        }
+        printf("\n\n\n ~~~~~~~~~~~~~~~~~~~~~~   Output.........\n\n");
+        printf("\nTHE MATRIX:\n");
+        for(i=0;i<r;i++){
+            for(j=0;j<c;j++){
+                printf("  %d",a[i][j]);
+            }
+            printf("\n");
+        } 
+        for(i=0;i<r;i++){
+            for(j=0;j<c;j++){
+                if(a[i][j]!=0){                                                 //  creating sparse matrix
+                    b[k][0]=i;
+                    b[k][1]=j;
+                    b[k][2]=a[i][j];
+                    k++;
+                }
+            }
+        } 
+        b[0][0]=r;
+        b[0][1]=c;
+        b[0][2]=k-1;
+        printf("\nTHE SPARSE MATRIX:\n");
+        for(i=0;i<k;i++){
+            for(j=0;j<3;j++){
+                printf("  %d",b[i][j]);
+            }
+            printf("\n");
+        }
+        c1[0][0]=b[0][1];
+        c1[0][1]=b[0][0];
+        c1[0][2]=b[0][2];
+        w=b[0][2];
+        for(i=0;i<b[0][1];i++){
+            for(j=1;j<=w;j++){
+                if(b[j][1]==i){                                                 // Sparse to transpose
+                    c1[z][0]=b[j][1];
+                    c1[z][1]=b[j][0];
+                    c1[z][2]=b[j][2];
+                    z++;
+                }
+            }
+        }
+        printf("\nTHE TRANSPOSE OF SPARSE MATRIX:\n");
+        for(i=0;i<k;i++){
+            for(j=0;j<3;j++){
+                printf("  %d",c1[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\ndo you want to continue::");
+        scanf("%s",&ch);
+    }while(ch=='y');
+}
