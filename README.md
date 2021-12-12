@@ -1,3 +1,3 @@
 # DSLAB
-<h2> 1.SPARSE MATRIX <h2\>
+<h2> SPARSE MATRIX <h2\>
 
