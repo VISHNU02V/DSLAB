@@ -1,0 +1,11 @@
+STEP1: START
+STEP2: intialise 3 arrays a[50][50],b[50][50],c1[50][50],k=1
+STEP3: input the rows and column of array as r and c
+STEP4: input the elements in to the array
+STEP5: converting matrix to sparse
+STEP6: repeat i=0 untile i<r
+      STEP6.1: intialise j=0 repeat untile j<c
+            STEP6.1.1: if a[i][j] not equal to 0 then
+                    STEP6.1.1.1: b[k][0]=i
+                    STEP6.1.1.2: b[k][1]=j
+                    STEP6.1.1.3: b[k][2]=
