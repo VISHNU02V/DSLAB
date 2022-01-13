@@ -55,9 +55,7 @@ void main(){
             }
             printf("]");
             printf("\nTHE SORTED ARRAY\n  [");
-            for(i=n;i>0;i--){
-                sort(a,n);
-            }
+            sort(a,n);           
             for(i=0;i<n;i++){
                 printf(" %d,",a[i]);
             }
